@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.destroy_all
+10.times do |i|
+  User.create(
+    name: "user_#{i}"
+  )
+end
+puts "已建立#{User.count}筆資料"
